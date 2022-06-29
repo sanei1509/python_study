@@ -11,7 +11,7 @@
 
 ``Resultado esperado del ejemplo``
 
-_````c
+````-c
 El nivel actual de Cedric es 1
 El nivel actual de Cedric es 2
 Clase: Guerrero
