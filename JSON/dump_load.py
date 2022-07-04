@@ -1,13 +1,28 @@
 #!/usr/bin/python3
 import json
 
-my_obj = {"name": "hola"}
+obj = {"name": "hola"}
 
-def guardar_file(my_obj, filename):
+
+def save(my_obj, file):
     """guardar json en archivo"""
-    with open(filename, "w") as f:
-        json.dump(my_obj, filename)
+    with open(file, "w") as f:
+        """el dump va a escribir en el archivo abierto lo que le vamos a pasar"""
+        json.dump(obj, f)
 
 
-guardar_file(my_obj, "json.txt")
+save(obj, "json.txt")
 
+"""Veamos como funciona loads()"""
+
+data = '{"nombre":"Santi", "edad":21, "ciudad":"Santa Rosa" }' 
+
+"""Deserializamos para poder trabajar normalmente con la data"""
+dataPy =  json.loads(data)
+print(dataPy["ciudad"])
+
+# print(JSONobj["nombre"])
+"""Ahora como funciona dumps()"""
+# string = json.dumps(JSONobj)
+
+# print(string)
