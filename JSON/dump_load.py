@@ -23,6 +23,13 @@ print(dataPy["ciudad"])
 
 # print(JSONobj["nombre"])
 """Ahora como funciona dumps()"""
-# string = json.dumps(JSONobj)
+string = json.dumps(dataPy)
 
-# print(string)
+obj = json.loads(string)
+
+print(string)
+#"nombre": "Santi", "edad": 21, "ciudad": "Santa Rosa"}
+# print(string["nombre"])
+
+print(obj["nombre"])
+#{'nombre': 'Santi', 'edad': 21, 'ciudad': 'Santa Rosa'}
